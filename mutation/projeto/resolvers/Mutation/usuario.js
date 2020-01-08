@@ -1,4 +1,4 @@
-const { usuarios, proximoId } = require('../../data/db')
+const { usuarios, proximoIdUsu } = require('../../data/db')
 
 function indiceUsuario(filtro) {
     if (!filtro) return -1
@@ -20,7 +20,7 @@ module.exports = {
         }
         
         const novo = {
-            id: proximoId,
+            id: proximoIdUsu(),
             ...dados,
             perfil_id: 1,
             status: 'ATIVO'

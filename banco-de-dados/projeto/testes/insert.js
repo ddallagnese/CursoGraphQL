@@ -15,9 +15,9 @@ const perfilSU = {
     rotulo: 'Super Usuário'
 }
 
-db.insert(perfilSU).into('perfis')
-    .then(res => res[0])
-    .then(id => `O código gerado foi ${id}`)
-    .then(string => console.log(string))
+db.insert({ usuario_id: 1, perfil_id: 1 }).into('usuarios_perfis')
+    .then(res => console.log(res))
+    // .then(id => `O código gerado foi ${id}`)
+    // .then(string => console.log(string))
     .catch(err => console.log(err.sqlMessage))
     .finally(() => db.destroy())

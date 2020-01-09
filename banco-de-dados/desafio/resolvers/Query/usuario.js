@@ -5,7 +5,7 @@ module.exports = {
         return db('usuarios')
     },
     usuario(_, { filtro }) {
-        if(!filtro) return null
+        if (!filtro) return null
         const { id, email } = filtro
         if(id) {
             return db('usuarios')
